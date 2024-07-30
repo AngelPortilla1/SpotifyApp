@@ -1,0 +1,68 @@
+<!--
+<div class="row row-cols-1 row-cols-md-3 g-4 animated fadeIn">
+    <div (click)="verArtista(cancion)" *ngFor="let cancion of items" class="col puntero">
+        <div class="card h-100">
+        <img [src]="cancion.images | noimage" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{cancion.name}}</h5>
+          <p class="card-text">
+            <span *ngFor="let artis of cancion.artists" class="badge text-bg-secondary">
+             {{artis.name}}
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+</div> -->
+
+<!--
+<div class="row row-cols-1 row-cols-md-3 g-4 animated fadeIn">
+  <div *ngFor="let item of items" class="col puntero">
+    <div class="card h-100">
+      <img [src]="item.images[0]?.url || 'assets/img/noimage.png'" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{ item.name }}</h5>
+        <p class="card-text">
+          <span *ngFor="let artist of item.artists" class="badge text-bg-secondary" (click)="verArtista(artist)">
+            {{ artist.name }}
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>-->
+<!--
+<div class="row row-cols-1 row-cols-md-3 g-4 animated fadeIn">
+  <div *ngFor="let item of items" class="col puntero">
+    <div class="card h-100">
+      <img [src]="item.images[0]?.url || 'assets/img/noimage.png'" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{ item.name }}</h5>
+        <p class="card-text">
+          <span *ngFor="let artist of item.artists" class="badge text-bg-secondary" (click)="verArtista(artist)">
+            {{ artist.name }}
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+
+
+<div class="row row-cols-1 row-cols-md-3 g-4 animated fadeIn">
+  <div *ngFor="let item of items" class="col puntero" (click)="verArtista(item)">
+    <div class="card h-100">
+      <img [src]="item.images[0]?.url || 'assets/img/noimage.png'" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{ item.name }}</h5>
+        <p class="card-text">
+          <span *ngFor="let artist of item.artists" class="badge text-bg-secondary">
+            {{ artist.name }}
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+.container {
+    margin-top: 20px;
+  }
+  
+  .img-thumbnail {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .btn-link {
+    display: block;
+    margin-top: 10px;
+    color: #1DB954; /* Color verde de Spotify */
+  }
+  
+  .btn-danger {
+    margin-top: 20px;
+  }
+  
